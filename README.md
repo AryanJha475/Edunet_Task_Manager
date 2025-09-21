@@ -6,10 +6,6 @@
  Pro Task Manager ✨
 A sleek, modern, and intuitive task management application designed to boost productivity and help you stay organized with powerful date and time tracking features.
 
-Live Demo & Preview
-Replace this GIF with a screen recording of your application. You can use tools like Giphy Capture (macOS) or ScreenToGif (Windows) to create a GIF.
-
-[➡️ Live Demo Link Here] (Once you deploy your site, link it here)
 
 📖 Table of Contents
 Problem Statement
