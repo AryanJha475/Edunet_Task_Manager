@@ -1,73 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pro Task Manager</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pro Task Manager</title>
 
-    <!-- Google Fonts: Poppins -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Font Awesome for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <!-- Link to your stylesheet -->
-    <link rel="stylesheet" href="style.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div class="container">
+    <header>
+      <h1>Pro Task Manager</h1>
+      <button class="add-task-btn" id="addTaskBtn"><i class="fas fa-plus"></i> Add New Task</button>
+    </header>
 
-    <div class="container">
-        <header>
-            <h1>Pro Task Manager</h1>
-            <button class="add-task-btn" id="addTaskBtn"><i class="fas fa-plus"></i> Add New Task</button>
-        </header>
-
-        <main>
-            <div class="task-section">
-                <h2>Today</h2>
-                <ul class="task-list" id="todayTaskList"></ul>
-            </div>
-            <div class="task-section">
-                <h2>Upcoming</h2>
-                <ul class="task-list" id="upcomingTaskList"></ul>
-            </div>
-            <div class="task-section">
-                <h2>Completed</h2>
-                <ul class="task-list" id="completedTaskList"></ul>
-            </div>
-        </main>
+    <!-- 🔥 Progress Tracker -->
+    <div class="progress-container">
+      <p id="progressText">0% Completed (0 of 0 tasks)</p>
+      <div class="progress-bar">
+        <div class="progress-fill" id="progressFill"></div>
+      </div>
     </div>
 
-    <!-- Add/Edit Task Modal -->
-    <div class="modal" id="taskModal">
-        <div class="modal-content">
-            <h2 id="modalTitle">Add New Task</h2>
-            <form id="taskForm">
-                <input type="hidden" id="taskId">
-                <div class="form-group">
-                    <label for="taskNameInput">Task Name</label>
-                    <input type="text" id="taskNameInput" required placeholder="e.g., Finish project report">
-                </div>
-                <div class="form-group">
-                    <label for="taskDateInput">Due Date</label>
-                    <input type="date" id="taskDateInput" required>
-                </div>
-                 <div class="form-group">
-                    <label for="taskTimeInput">Due Time</label>
-                    <input type="time" id="taskTimeInput" required>
-                </div>
-                <div class="modal-actions">
-                    <button type="button" class="cancel-btn" id="cancelBtn">Cancel</button>
-                    <button type="submit" class="save-btn" id="saveBtn">Save Task</button>
-                </div>
-            </form>
+    <main>
+      <div class="task-section">
+        <h2>Today</h2>
+        <ul class="task-list" id="todayTaskList"></ul>
+      </div>
+      <div class="task-section">
+        <h2>Upcoming</h2>
+        <ul class="task-list" id="upcomingTaskList"></ul>
+      </div>
+      <div class="task-section">
+        <h2>Completed</h2>
+        <ul class="task-list" id="completedTaskList"></ul>
+      </div>
+    </main>
+  </div>
+
+  <!-- Add/Edit Task Modal -->
+  <div class="modal" id="taskModal">
+    <div class="modal-content">
+      <h2 id="modalTitle">Add New Task</h2>
+      <form id="taskForm">
+        <input type="hidden" id="taskId">
+        <div class="form-group">
+          <label for="taskNameInput">Task Name</label>
+          <input type="text" id="taskNameInput" required placeholder="e.g., Finish project report">
         </div>
+        <div class="form-group">
+          <label for="taskDateInput">Due Date</label>
+          <input type="date" id="taskDateInput" required>
+        </div>
+        <div class="form-group">
+          <label for="taskTimeInput">Due Time</label>
+          <input type="time" id="taskTimeInput" required>
+        </div>
+        <div class="modal-actions">
+          <button type="button" class="cancel-btn" id="cancelBtn">Cancel</button>
+          <button type="submit" class="save-btn" id="saveBtn">Save Task</button>
+        </div>
+      </form>
     </div>
+  </div>
 
-    <!-- Link to your JavaScript file -->
-    <script src="script.js"></script>
+  <!-- JS -->
+  <script src="script.js"></script>
 </body>
 </html>
-
